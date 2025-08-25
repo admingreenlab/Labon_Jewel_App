@@ -672,7 +672,7 @@ function Category() {
                                                 </div>
                                             </div>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                                <button onclick={handleReset} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding:'10px' }} expand="full">Reset</button>
+                                                <button onClick={handleReset} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding:'10px' }} expand="full">Reset</button>
                                                 <button onClick={toggleOffcanvas} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding:'10px' }} expand="full">Apply</button>
                                             </div>
                                         </div>
@@ -695,6 +695,7 @@ function Category() {
                                                                 //checked={selectedCategories.includes(subcategory._id)}
                                                                 checked={Array.isArray(CategoryFilter) && CategoryFilter.includes(subcategory._id)}
                                                                 onIonChange={() => handleCategoryChange(subcategory._id)}
+                                                                disabled={loading}
                                                             />
                                                             <span style={{ margin: '1px 0px 0px 10px' }}>{subcategory.name}</span>
                                                         </div>
@@ -714,6 +715,7 @@ function Category() {
                                                             style={{ marginBottom: '10px' }}
                                                             checked={Array.isArray(selectedCollection) && selectedCollection.includes(CollectionFilter._id)}
                                                             onIonChange={() => handleCollectionChange(CollectionFilter._id)}
+                                                            disabled={loading}
                                                         >
                                                             <span>{CollectionFilter.name}</span>
                                                         </IonCheckbox>
@@ -801,6 +803,7 @@ function Category() {
                                                                 //checked={selectedCategories.includes(subcategory._id)}
                                                                 checked={filterDetails?.shape?.includes(item)}
                                                                 onIonChange={(event) => handleShapeCheckboxChange(event, item)}
+                                                                disabled={loading}
                                                             />
                                                             <span style={{ margin: '1px 0px 0px 10px', textTransform: 'uppercase' }}>{item}</span>
                                                         </div>

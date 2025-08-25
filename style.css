@@ -1896,9 +1896,6 @@ p {
 
 
 input:focus-visible {
-    outline-offset: 0px !important;
-    border: 1px solid rgba(0, 0, 0, 0) !important;
-    border-radius: 0 !important;
     outline: none !important;
 }
 .marginview {
@@ -1910,7 +1907,7 @@ input:focus-visible {
     width: auto;
     height: 19px;
     border-radius: 20%;
-    z-index: 9999999999999999999999999999999;
+    z-index: 99999999999;
 }
 /* .marginview .select-icon.md.hydrated {
     display: none !important;

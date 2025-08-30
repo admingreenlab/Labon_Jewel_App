@@ -940,8 +940,8 @@ ion-button.addticaed {
 }
 
 .offcanvas.show {
-    bottom: 0;
-    top: 115px;
+    bottom: 100%;
+    top: 195px;
     transition: 1.3s;
 }
 
@@ -1030,8 +1030,8 @@ ion-button.addticaed {
     border-radius: 8px;
     text-align: center;
     width: 100%;
-    max-width: 560px;
-    height: 100%;
+    max-width: 400px;
+    height: 80%;
     margin: auto;
     display: flex
 ;
@@ -1051,6 +1051,9 @@ ion-button.addticaed {
     justify-content: center;
     align-items: center;
     padding: 9px;
+}
+.imgbtn svg path{
+    fill: #4c3226;
 }
 
 .label-text-wrapper {
@@ -1109,6 +1112,7 @@ ion-content {
     transform: translate(-50%, -50%);
     max-width: 575px;
     width: 90%;
+    
 }
 
 .popup-1 {
@@ -1139,12 +1143,17 @@ ion-content {
     border-radius: 30px;
     font-size: 13px;
     font-family: 'Reem Kufi';
+    
 }
-
+.diamondcolmin ion-radio::part(container) {
+    border-radius: 30px;
+}
 .diamondcolmin ion-radio.radio-checked::part(container) {
-    border-color: #34221a;
+    border-color: #34221a; 
 }
-
+.diamondcol ion-radio.radio-checked::part(container) {
+    color: #34221a; 
+}
 .adtocard {
     width: 50%;
     margin-bottom: 20px;
@@ -1154,9 +1163,18 @@ ion-content {
     margin-bottom: 25px;
 }
 
-.search input[type="text"]:focus-visible {
-    border: 0;
-    outline: -webkit-focus-ring-color auto 0px !important;
+.search input[type="text"]:focus-visible,
+input:focus-visible,
+input:focus {
+    border: 1px solid !important;
+    outline: -webkit-focus-ring-color auto 1px !important;
+    outline-offset: 1px !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transition: none !important;
+
+
 }
 
 .saidmenumain {
@@ -1186,6 +1204,7 @@ ion-content {
     align-items: center;
     justify-content: space-between;
     transition: 0.3s;
+    
 }
 
 .accordion h6 {
@@ -1307,7 +1326,7 @@ span.title {
     border: 1px solid #4c32266b;
     padding: 11px 15px;
     margin-top: 39px !important;
-    margin: 15px;
+    margin: 0 15px;
     border-radius: 7px;
 }
 

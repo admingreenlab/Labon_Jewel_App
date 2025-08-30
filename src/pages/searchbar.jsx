@@ -14,6 +14,7 @@ import {
   IonSearchbar,
   IonRow,
   IonCol,
+  IonPage,
   IonButton
 } from '@ionic/react';
 import { useHistory } from "react-router-dom";
@@ -57,56 +58,55 @@ const LibraryPage = () => {
 
   return (
     <>
+      <IonHeader style={{ marginBottom: "50px" }}>
+        <h1 style={{color:'white'}}>home</h1>
+      </IonHeader>
       <Header />
-      <IonContent>
-        <IonRow>
-          <IonCol>
-            <div>
-              <IonCard style={{
-                marginBottom: '20px',
-                marginTop: '110px'
-              }}>
-                <IonCardHeader className='maindheadider' style={{ backgraount: '#a97550' }}>
-                  <IonCardTitle> Search </IonCardTitle>
-                </IonCardHeader>
-                <IonCardContent style={{ paddingLeft: '0', paddingRight: '0', height: '100vh' }}>
-                  <form onSubmit={handleSearch} >
-                    <div className="search">
-                      <input
-                        style={{ border: '0', width: '100%' }}
-                        type="text"
-                        placeholder="Type Your Search SKU..."
-                        value={searchName}
-                        onChange={(e) => setSearchName(e?.target?.value?.toUpperCase())}
-                      />
-                    <span
-                      onClick={() => setSearchName("")}
-                      style={{
-                        position: 'absolute',
-                        top: '13px',
-                        right: '36px',
-                        fontSize: '18px',
-                        cursor: 'pointer'
-                      }}
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                      </svg>
-                    </span>
-                    </div>
-                  </form>
-                  {errorMessage && (
-                    <div style={{ color: 'red', marginTop: '10px', padding: '0 20px' }}>
-                      {errorMessage}
-                    </div>
-                )}
-                </IonCardContent>
-              </IonCard>
-            </div>
-          </IonCol>
-        </IonRow>
+      <IonPage>
+        <div style={{ margin: '30px', marginTop: '130px' }}></div>
+        <IonContent>
+          <IonRow>
+            <IonCol>
+              <div>
+                <div style={{ marginTop: '20px' }}>
+                  <h4 class="text-center mb-3 element">Search</h4>
+                </div>
+                    <form onSubmit={handleSearch} >
+                      <div className="search" style={{ position: 'relative' }}>
+                        <input
+                          style={{ border: '0', width: '100%',backgroundColor:'transparent' }}
+                          type="text"
+                          placeholder="Type Your Search SKU..."
+                          value={searchName}
+                          onChange={(e) => setSearchName(e?.target?.value?.toUpperCase())}
+                        />
+                        <span
+                          onClick={() => setSearchName("")}
+                          style={{
+                            position: 'absolute',
+                            top: '15px',
+                            right: '15px',
+                            fontSize: '18px',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg>
+                        </span>
+                      </div>
+                    </form>
+                    {errorMessage && (
+                      <div style={{ color: 'red', marginTop: '10px', padding: '0 20px' }}>
+                        {errorMessage}
+                      </div>
+                  )}
+              </div>
+            </IonCol>
+          </IonRow>
 
-      </IonContent>
+        </IonContent>
+      </IonPage>
     </>
   );
 };

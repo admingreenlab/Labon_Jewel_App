@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { IonContent, IonImg, IonTitle, IonToolbar, IonCol, IonGrid, IonRow, IonTabButton, IonRefresher, IonRefresherContent, } from '@ionic/react';
+import { IonContent, IonImg, IonTitle, IonToolbar, IonCol, IonGrid, IonRow, IonTabButton, IonRefresher, IonRefresherContent, IonPage, } from '@ionic/react';
 // import Container from "react-bootstrap/Container";
 // import Table from 'react-bootstrap/Table'
 // import Pagination from 'react-bootstrap/Pagination';
@@ -114,8 +114,7 @@ function Demo() {
     };
 
     return (
-        <>
-
+<IonPage>
             <IonContent fluid className="text-center" > 
                 <h6 className="mt-3">Watch List</h6>
                 <div style={{display:'flex', margin:"150px 0px 0px 0px"}} >
@@ -238,8 +237,7 @@ function Demo() {
                 </div>
 
             </IonContent>
-
-        </>
+            </IonPage>
     );
 }
 

@@ -20,6 +20,7 @@ import {
   IonInput,
   IonToast,
   IonRefresher, IonRefresherContent,
+  IonPage
 
 } from '@ionic/react';
 import '../pages/Tab1.css';
@@ -360,20 +361,15 @@ const RadioPage = () => {
 
 
   return (
-    <>
-      <IonHeader style={{ marginBottom: "55px" }}>
-        <h1>home</h1>
-      </IonHeader>
+ <IonPage>
       <Header />
-
+      <IonHeader>
+            {/* <h1>Home</h1> */}
+      </IonHeader>
+                <div style={{ margin: '30px', marginTop: '130px' }}></div>
       <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '100px' }}>
         <h4 className="text-center mb-5 element" style={{ marginTop: '20px' }}>add to Card</h4>
-        <IonRefresher slot="fixed" onIonRefresh={handleRefresh} >
-          <IonRefresherContent
-            pullingIcon={chevronDownCircleOutline}
-            refreshingSpinner="circles"
-          ></IonRefresherContent>
-        </IonRefresher>
+
         {cartDetails?.items?.length === 0 || cartDetails?.message ? (
           <div
             style={{
@@ -470,7 +466,7 @@ const RadioPage = () => {
                                   disabled={item?.quantity === 1}
                                 >
                                   <div style={{ border: '1px solid #000000b8', padding: '6px 12px', borderRadius: ' 10px 0px 0px 10px' }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-dash-circle" viewBox="0 0 16 16">
                                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                       <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
                                     </svg>
@@ -490,7 +486,7 @@ const RadioPage = () => {
                                 }
                                 >
                                   <div style={{ border: '1px solid #000000b8', padding: '6px 12px', borderRadius: ' 0px 10px 10px 0px' }}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="grey" class="bi bi-plus-circle" viewBox="0 0 16 16">
                                       <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                       <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
                                     </svg>
@@ -501,7 +497,7 @@ const RadioPage = () => {
 
                                 fill="outline"
                                 placeholder="Type Message"
-                                style={{ color: 'black', marginTop: '15px' }}
+                                style={{ color: 'black', marginTop: '15px',border:"1px solid gray", borderRadius:"5px", padding:"5px" }}
                                 value={item?.message || ''}
                                 onIonChange={(e) => handleTypeMessage(item?.item?._id, e, index)}
                               ></IonTextarea>
@@ -613,9 +609,9 @@ const RadioPage = () => {
                                     color='secondary'
                                     labelPlacement="fixed"
                                     alignment="center"
-                                    style={{ color: 'black', marginRight: '0', maxWidth: '100px' }}
+                                    style={{ color: 'black', marginRight: '0', maxWidth: '80px' }}
                                   >
-                                    <div style={{ width: '80%' }}>
+                                    <div style={{ width: '60%' }}>
                                       <span className="option-label">
                                         <IonImg className='slider-img '
                                           src={`/img/color-${metal.toLowerCase()}.svg`}
@@ -675,7 +671,7 @@ const RadioPage = () => {
                                             value={ele}
                                             checked={selectedQuality === ele}
                                             onChange={() => setSelectedQuality(ele)}
-                                            style={{ marginRight: '5px' }}
+                                            style={{ margin:"auto",marginRight: '5px',color:'pink' }}
                                           />
 
                                           <span>{ele}</span>
@@ -703,7 +699,7 @@ const RadioPage = () => {
                                       style={{
                                         borderRadius: '10px',
                                         // margin: '0px 0px 0px 10px',
-                                        fontSize: '14px',
+                                        fontSize: '17px',
                                         border: '1px solid #7f7d7d',
                                         backgroundColor: '#fff6ec',
                                         color: 'rgb(76 50 38)',
@@ -736,7 +732,7 @@ const RadioPage = () => {
                                     style={{
                                       borderRadius: '10px',
 
-                                      fontSize: '14px',
+                                      fontSize: '16px',
                                       border: '1px solid #7f7d7d',
                                       backgroundColor: '#fff6ec',
                                       color: 'rgb(76 50 38)',
@@ -758,8 +754,8 @@ const RadioPage = () => {
                               </IonCol>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                              <button onClick={(e) => handleSaveChanges(e, index)} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding: '10px', }} expand="full">Save</button>
-                              <button onClick={() => setOpenModalId(null)} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding: '10px', }} expand="full">Close</button>
+                              <button onClick={(e) => handleSaveChanges(e, index)} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding: '10px',color:'white', fontSize:'14px' }} expand="full">Save</button>
+                              <button onClick={() => setOpenModalId(null)} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding: '10px',color:'white', fontSize:'14px' }} expand="full">Close</button>
                             </div>
                           </div>
                         </div>
@@ -877,10 +873,7 @@ const RadioPage = () => {
           </div>
         )}
       </IonContent >
-
-
-
-    </>
+</IonPage>
   );
 };
 

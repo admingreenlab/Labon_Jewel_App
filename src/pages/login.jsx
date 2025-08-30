@@ -251,7 +251,7 @@ const Login = ({ handleClosep }) => {
                                                             onChange={() => setIsRememberMe(!isRememberMe)}
                                                             style={{width:'10%', marginTop:'-4px'}}
                                                         />
-                                                        <span style={{ marginLeft: '5px', fontSize: '14px', color: 'rgb(76 50 38)' }}>
+                                                        <span style={{ marginLeft: '5px', marginTop:'-7px', fontSize: '14px', color: 'rgb(76 50 38)' }}>
                                                             <label>Remember Me</label>
                                                         </span>
                                                     </IonCol>

@@ -26,6 +26,7 @@ const HomePage = () => {
     try {
       const response = await jwtAuthAxios.get(`client/dashboard`);
       setHomeDetails(response?.data.data.sec[0].data);
+ 
       // console.log('Fetched data:', response?.data?.data.sec[0].data);
     } catch (error) {
 
@@ -40,55 +41,33 @@ const HomePage = () => {
   }, []);
 
 
-  const handleRefresh = async (event) => {
-    await fetchHomeData();
-    setTimeout(() => {
-      // Any calls to load data go here
-      event.detail.complete();
-    }, 1500); // Signal that the refresh is complete
-  };
+  // const handleRefresh = async (event) => {
+  //   await fetchHomeData();
+  //   setTimeout(() => {
+  //     // Any calls to load data go here
+  //     event.detail.complete();
+  //   }, 1500); // Signal that the refresh is complete
+  // };
 
   return (
-    <>
+      <IonPage>
+        <IonHeader collapse="condense">
+    {/* This is a dummy header to help Ionic recognize layout */}
+  </IonHeader>
       <Head />
-
-      <IonHeader >
-        <h1>home</h1>
-      </IonHeader>
-
+      
       <IonContent color="primary" style={{ marginTop: '100px' }}>
-        <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px'  }}>
-          <IonRefresherContent
-            pullingIcon={chevronDownCircleOutline}
-            refreshingSpinner="circles"
-          ></IonRefresherContent>
-        </IonRefresher>
+      
         <IonGrid >
           <IonRow>
             <IonCol>
-              <Swiper className='videobnnnner' style={{ marginBottom: '20px', marginTop: '50px' }}
+              <Swiper className='videobnnnner' style={{ marginBottom: '20px', marginTop: '160px' }}
                 spaceBetween={50}
                 slidesPerView={1}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
                 autoplay={true}
-              >
-                <SwiperSlide>
-                  {/* <IonImg className='slider-img'
-                    src="/img/slider-banner-1.jpg"
-                    style={{ width: '100%', height: '200px', margin: '0', objectFit: 'cover', borderRadius: '9px', borderRadius: '9px', overflow: 'hidden' }}
-                  ></IonImg> */}
-                  <video
-                    width="100%"
-                    height="auto"
-                    autoPlay
-                    muted
-                    loop
-                  >
-                    <source src="/img/main-banner-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </SwiperSlide>
+              >  
                 <SwiperSlide>
                   <IonImg
                     src="/img/slider-banner-2.jpg"
@@ -133,8 +112,7 @@ const HomePage = () => {
           </IonGrid>
         </div>
       </IonContent >
-
-    </>
+      </IonPage>
 
   )
 };

@@ -202,7 +202,6 @@ function App() {
     return !!token;
   };
 
-
   const [isAuthenticated, setIsAuthenticated] = useState(isAuthenticatedR());
 
 
@@ -264,14 +263,14 @@ function App() {
   const closeDropdown = () => {
     setShowDropdown(false);
   };
-  useEffect(() => {
-    fetchHomeData();
-  }, []);
 
   useEffect(() => {
     setIsAuthenticated(isAuthenticatedR());
   }, []);
 
+  useEffect(() => {
+    fetchHomeData();
+  }, []);
 
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null); // Track which item is open
@@ -309,25 +308,31 @@ function App() {
       }
     };
   }, []);
+  
 
   const hideTabBarRoutes = ['/login', '/registerhere', '/forget', '/resetpassword', '/dimhome'];
-  return (
-    <>
+  return (  
  <IonApp>
       <IonReactRouter>
         <DataProvider>
         <MarginProvider>
           <IonTabs id="main-content">
             <IonRouterOutlet>
-              <Route exact path="/">
-                {isAuthenticated ? <Redirect to="/home" /> : <Redirect to="/login" />}
-              </Route>
+            <Route path="/" render={() => (
+  <HomePage />
+)} exact={true} />
+             
 
               <Route
                 path="/login"
                 render={() => (isAuthenticated ? <Redirect to="/home" /> : <Login setIsAuthenticated={setIsAuthenticated} />)}
                 exact={true}
               />
+                            
+<Route path="/home" render={() => (
+  <HomePage />
+)} exact={true} />
+
               <Route path="/forget" component={Forget} exact={true} />
               {isAuthenticated ? (
                 <>
@@ -360,13 +365,17 @@ function App() {
           </IonTabs>
           </MarginProvider>
         </DataProvider>
-      </IonReactRouter>
       {!hideTabBarRoutes.includes(window.location.pathname) && (
-        <IonHeader>
-
-
+        <IonHeader style={{ 
+          top: 'calc(var(--ion-safe-area-top, 0px) + 10px)', 
+          left: 0, 
+          right: 0, 
+          zIndex: 99,
+          position: 'fixed',
+          width: '100%'
+        }}>
           <ion-router-link href={`/home`}>
-            <div className='toplogo' style={{ padding: '10px', background: '#fff6ec' }}>
+            <div className='toplogo'>
               <IonImg
                 slot="start"
                 src="/img/logo-1.svg"
@@ -374,7 +383,9 @@ function App() {
               ></IonImg>
             </div>
           </ion-router-link>
-          <IonToolbar color='secondary' >
+        <IonToolbar style={{
+    padding: '10px 0 7px 0',
+  }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 {/* <IonButtons slot="start">
@@ -395,8 +406,6 @@ function App() {
                   style={{ height: '30px', margin: '0', marginLeft: '0px' }}
                 ></IonImg>
               </div>
-
-
               <div style={{ position: 'relative' }}>
                 <button onClick={toggleDropdown} style={{ background: 'none', border: 'none', cursor: 'pointer', marginRight: '10px' }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="bisque" class="bi bi-person" viewBox="0 0 16 16">
@@ -413,7 +422,7 @@ function App() {
         !hideTabBarRoutes.includes(window.location.pathname) && (
           <>
             {showDropdown && (
-              <div className='dropdown-menu' style={{ position: 'absolute', right: '9px', top: '100px', border: '1px solid #ccc', zIndex: 1000 }}>
+              <div className='dropdown-menu' style={{ position: 'absolute', right: '9px', top: '140px', border: '1px solid #ccc', zIndex: 1000 }}>
                 {/* <div style={{ fontSize: '24px', justifyContent: 'end', padding: '0', display: 'flex', marginBottom: '-14px' }}>
                 <ion-icon name="close-outline" onClick={closeDropdown}></ion-icon>
               </div> */}
@@ -456,9 +465,9 @@ function App() {
             )}
 
 
-            <div className={`saidmenumain sidebar ${isMenuOpen ? 'open' : ''}`}>
-              <IonHeader>
-                <IonToolbar color="secondary">
+            <div className={`saidmenumain sidebar ${isMenuOpen ? 'open' : ''}`}style={{marginTop: '5px'}}>
+              <IonHeader >
+                <IonToolbar color="secondary" style={{padding: '10px 0 7px 0'}}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                     <div>
                       <IonImg
@@ -1163,7 +1172,6 @@ function App() {
           </>
         )
       }
-      <>
         {showModal && (
           <div className="modal1">
             <div className="modal2">
@@ -1227,9 +1235,9 @@ function App() {
             </div>
           </div>
         )}
-      </>
+      </IonReactRouter>
+
       </IonApp>
-    </>
   );
 }
 

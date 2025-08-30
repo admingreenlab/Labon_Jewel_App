@@ -164,3 +164,18 @@ ion-tab-button {
         transform: translateX(-20px);
     }
 }
+
+ion-header {
+    --background: #4d3226 !important;
+    background: #4d3226 !important;
+  }
+  
+  ion-toolbar[color='secondary'] {
+    --background: #4d3226 !important;
+    background: #4d3226 !important;
+  }
+
+.toplogo{
+    padding: 10px !important;
+    background: #fff6ec !important;
+  }

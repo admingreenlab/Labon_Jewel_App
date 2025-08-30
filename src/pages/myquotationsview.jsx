@@ -100,205 +100,205 @@ function Product() {
     
 
     return (
-        <>
+            <IonPage>
             <Header />
             <IonHeader>
-                <h1>home</h1>
+            <h1 style={{color:"white"}}>home</h1>
             </IonHeader>
-            <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '100px', marginTop: '10px' }}>
-                        <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px'  }}>
-                          <IonRefresherContent
-                            pullingIcon={chevronDownCircleOutline}
-                            refreshingSpinner="circles"
-                          ></IonRefresherContent>
-                        </IonRefresher>
-                <div style={{ marginTop: '55px', marginBottom: '0px' }}>
-                    <h5 class="text-center mb-5 element">My Quotations View</h5>
-                </div>
-                <div className='myquotations'>
-                    <IonGrid>
-                        <IonRow>
-                            <IonCol size='12' style={{ marginBottom: '50px'}}>
-                                <IonAccordionGroup className='main-qustion main-qustion1'>
-                                    {quotation?.items?.map((item, index) => (
-                                        <IonAccordion key={item._id} value={`item-${index}`} eventKey={index + 1} style={{marginTop:'10px'}}>
-                                            <IonItem slot="header" color="secondary">
-                                                <p>SKU : {item.item.sku}</p>
-                                            </IonItem>
-                                            <div className="ion-padding" slot="content" style={{ border:'2px solid #4c322659'}}>
-                                            <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Thumbnail : 
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            <IonImg
-                                                                className='thummail'
-                                                                src={IMG_PATH + item?.item?.thumbnailImage}
-                                                            ></IonImg>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                               
-                                               <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            SKU :
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.item.sku}
-                                                        </span>
-                                                    </div>
-                                                </div>
+                <div style={{ margin: '30px', marginTop: '130px' }}></div>
+                <IonContent color="primary" style={{ marginBottom: '100px' }}>
+                            <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px'  }}>
+                            <IonRefresherContent
+                                pullingIcon={chevronDownCircleOutline}
+                                refreshingSpinner="circles"
+                            ></IonRefresherContent>
+                            </IonRefresher>
+                            <div style={{ marginTop: '20px' }}>
+                        <h5 class="text-center mb-5 element" >My quotations View</h5>
+                    </div>
+                    <div className='myquotations'>
+                        <IonGrid>
+                            <IonRow>
+                                <IonCol size='12' style={{ marginBottom: '50px'}}>
+                                    <IonAccordionGroup className='main-qustion main-qustion1'>
+                                        {quotation?.items?.map((item, index) => (
+                                            <IonAccordion key={item._id} value={`item-${index}`} eventKey={index + 1} style={{marginTop:'10px'}}>
+                                                <IonItem slot="header" color="secondary">
+                                                    <p>SKU : {item.item.sku}</p>
+                                                </IonItem>
+                                                <div className="ion-padding" slot="content" style={{ border:'2px solid #4c322659'}}>
                                                 <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Description :
-                                                        </h6>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Thumbnail: 
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                <IonImg
+                                                                    className='thummail'
+                                                                    src={IMG_PATH + item?.item?.thumbnailImage}
+                                                                ></IonImg>
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                        {item.item.name}
-                                                        </span>
-                                                    </div>
-                                                </div>
+                                                
                                                 <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            KT :
-                                                        </h6>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                SKU:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.item.sku}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                        {item.KT}
-                                                        </span>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Description:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                            {item.item.name}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                          Metal :
-                                                        </h6>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                KT:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                            {item.KT}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                        {item.item.metal}
-                                                        </span>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                            Metal:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                            {item.item.metal}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                {/* <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Diamond Color/Clarity
-                                                        </h6>
+                                                    {/* <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Diamond Color/Clarity
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.item.diacolororclarity}
+                                                            </span>
+                                                        </div>
+                                                    </div> */}
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Size:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.size}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.item.diacolororclarity}
-                                                        </span>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Finding:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.finding}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </div> */}
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Size :
-                                                        </h6>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Item Quantity:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.quantity}
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.size}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Finding :
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.finding}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Item Quantity :
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.quantity}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                        Diamond Quantity:
-                                                        </h6>
-                                                    </div>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                            Diamond Quantity:
+                                                            </h6>
+                                                        </div>
 
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.item.totalDiamondPcs}
-                                                        </span>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.item.totalDiamondPcs}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                            Netwt:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                            {Number(item.item.netwt).toFixed(2)}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                            Labor Amt:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                            {Number(item.laborAmt).toFixed(2)}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div className='d-flex'>
+                                                        <div className='left-hed'>
+                                                            <h6>
+                                                                Message:
+                                                            </h6>
+                                                        </div>
+                                                        <div className='right-hed'>
+                                                            <span>
+                                                                {item.message}
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                          Netwt :
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                        {Number(item.item.netwt).toFixed(2)}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                        Labor Amt :
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                        {Number(item.laborAmt).toFixed(2)}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div className='d-flex'>
-                                                    <div className='left-hed'>
-                                                        <h6>
-                                                            Message :
-                                                        </h6>
-                                                    </div>
-                                                    <div className='right-hed'>
-                                                        <span>
-                                                            {item.message}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </IonAccordion>
-                                    ))}
-                                </IonAccordionGroup>
-                            </IonCol>
-                        </IonRow>
-                    </IonGrid>
-                </div>
+                                            </IonAccordion>
+                                        ))}
+                                    </IonAccordionGroup>
+                                </IonCol>
+                            </IonRow>
+                        </IonGrid>
+                    </div>
 
-            </IonContent >
-
-        </ >
+                </IonContent >
+            </IonPage>
     );
 }
 export default Product; 

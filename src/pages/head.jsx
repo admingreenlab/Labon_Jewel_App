@@ -79,33 +79,6 @@ function Head() {
 
   return (
     <>
-      {/* <IonHeader>
-                <IonToolbar style={{ background: '#a97550' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '6px 0' }}>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
-                            <IonButtons slot="start">
-                                <IonMenuButton fill='clear' >
-                                    <Ion-Icon slot="start" src="src/img/align-left.svg" style={{ height: '100%', marginLeft: '10px', marginRight: '10px' }}></Ion-Icon>
-                                </IonMenuButton>
-                            </IonButtons>
-                            <IonImg
-                                slot="start"
-                                src="src/img/logo.svg"
-                                style={{ height: '30px', margin: '0', marginLeft: '0px' }}
-                            ></IonImg>
-                        </div>
-                        <div style={{ position: 'relative' }}>
-                            <button onClick={toggleDropdown} style={{ background: 'none', border: 'none', cursor: 'pointer', marginRight: '10px' }}>
-                                <IonImg
-                                    slot="start"
-                                    src="src/img/user.png"
-                                    style={{ height: '30px', margin: '0' }}
-                                ></IonImg>
-                            </button>
-                        </div>
-                    </div>
-                </IonToolbar>
-            </IonHeader> */}
       {showDropdown && (
         <div className='dropdown-menu' style={{ position: 'absolute', right: '9px', top: '62px', border: '1px solid #ccc', zIndex: 1000 }}>
           {/* Dropdown items */}
@@ -130,7 +103,7 @@ function Head() {
         </div>
       )}
 
-      <div className='bottombtm-min'>
+      <div className='bottombtm-min' style={{ paddingBottom: '15px' }}>
         <div className='bottombtm'>
           <a href="/home" size='small' >
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#FFDEB3" className="bi bi-house-door" viewBox="0 0 16 16">

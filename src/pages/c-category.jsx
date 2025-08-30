@@ -185,10 +185,11 @@ function CategoryPage() {
 
     return (
         <IonPage>
-            <IonHeader>
-                <h1>home</h1>
-            </IonHeader>
             <Header />
+            <IonHeader>
+                <h1>Home</h1>
+            </IonHeader>
+            
 
             <IonContent color="primary" >
                 <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px' }}>
@@ -197,7 +198,7 @@ function CategoryPage() {
                         refreshingSpinner="circles"
                     ></IonRefresherContent>
                 </IonRefresher>
-                <IonGrid>
+                <IonGrid style={{ marginTop: '90px' }}>
                     <IonRow>
                         <IonCol>
                             <Swiper className='main-toslider' style={{ marginBottom: '20px', height: '200px' }}

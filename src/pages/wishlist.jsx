@@ -58,7 +58,7 @@ const WishlistPage = () => {
     <>
 
 
-      <IonPage style={{ marginTop: '100px' }}>
+      <IonPage style={{ marginTop: '160px' }}>
         <Header />
         <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '100px' }}>
           <h4 className="text-center mb-5 element" style={{ marginTop: '20px' }}>Your Wishlist</h4>

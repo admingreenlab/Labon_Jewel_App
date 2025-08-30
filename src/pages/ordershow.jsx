@@ -80,12 +80,13 @@ function Ordershow() {
       };
     
     return (
-        <>
+        
+<IonPage>
             <Header />
             <IonHeader>
-                <h1>home</h1>
+                <h1 style={{color:'white'}}>home</h1>
             </IonHeader>
-
+                <div style={{ margin: '30px', marginTop: '100px' }}></div>
             <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '100px', marginBottom: '10px' }}>
                         <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginBottom: '20px'  }}>
                           <IonRefresherContent
@@ -214,8 +215,8 @@ function Ordershow() {
                 </div>
 
             </IonContent >
-
-        </ >
+    
+            </IonPage>
     );
 }
 export default Ordershow; 

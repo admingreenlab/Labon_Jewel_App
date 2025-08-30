@@ -428,11 +428,15 @@ function Category() {
 
 
     return (
-        <>
-            <Header />
-
+        
             <IonPage>
-                <div style={{ margin: '30px', marginTop: '60px' }}></div>
+                 <IonHeader>
+                            {/* <h1>Home</h1> */}
+                        </IonHeader>
+            <Header />
+           
+
+                <div style={{ margin: '30px', marginTop: '110px' }}></div>
 
                 <IonContent color="primary">
                     <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
@@ -517,17 +521,17 @@ function Category() {
                                 {totalitem > 0 ? `${itemname} (${totalitem})` : `${itemname} (0)`}
                             </div>
 
-                            <IonSelect
+                            <select
                                 className="w-auto"
                                 style={{ marginLeft: 'auto', display: 'flex', color: '#4c3226', border: '2px solid #9d7664', marginLeft: 'auto', width: 'auto', padding: '0 10px', borderRadius: '9px' }}
                                 value={pageSize}
-                                onIonChange={handlePageSizeChange}
+                                onChange={handlePageSizeChange}
                             >
-                                <IonSelectOption value={24}>24</IonSelectOption>
-                                <IonSelectOption value={48}>48</IonSelectOption>
-                                <IonSelectOption value={72}>72</IonSelectOption>
-                                <IonSelectOption value={100}>100</IonSelectOption>
-                            </IonSelect>
+                                <option value={24}>24</option>
+                                <option value={48}>48</option>
+                                <option value={72}>72</option>
+                                <option value={100}>100</option>
+                            </select>
                         </IonCol>
 
                         <div className='main-catagory'>
@@ -672,8 +676,8 @@ function Category() {
                                                 </div>
                                             </div>
                                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                                                <button onClick={handleReset} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding:'10px' }} expand="full">Reset</button>
-                                                <button onClick={toggleOffcanvas} style={{ width: '100%', margin: '15px 0', background: '#f3a41c', padding:'10px' }} expand="full">Apply</button>
+                                                <button onClick={handleReset} style={{ width: '100%', margin: '15px 0', background: '#f3a41c',color: 'white', padding:'10px' }} expand="full">Reset</button>
+                                                <button onClick={toggleOffcanvas} style={{ width: '100%', margin: '15px 0', background: '#f3a41c',color: 'white', padding:'10px' }} expand="full">Apply</button>
                                             </div>
                                         </div>
                                         <IonAccordionGroup
@@ -849,8 +853,8 @@ function Category() {
                         </div>
                     </IonGrid>
                 </IonContent>
+        
             </IonPage>
-        </>
     );
 }
 export default Category; 

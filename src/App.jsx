@@ -319,15 +319,9 @@ function App() {
           <IonTabs id="main-content">
             <IonRouterOutlet>
             <Route path="/" render={() => (
-<<<<<<< HEAD
-  <HomePage />
-)} exact={true} />
-             
-=======
               <HomePage />
             )} exact={true} />
                         
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 
               <Route
                 path="/login"
@@ -335,13 +329,6 @@ function App() {
                 exact={true}
               />
                             
-<<<<<<< HEAD
-<Route path="/home" render={() => (
-  <HomePage />
-)} exact={true} />
-
-              <Route path="/forget" component={Forget} exact={true} />
-=======
               <Route path="/home" render={() => (
                 <HomePage />
               )} exact={true} />
@@ -349,7 +336,6 @@ function App() {
               <Route path="/forget" component={Forget} exact={true} />
               <Route path="/privacypolicy" component={PrivacyPolicy} exact={true} />
 
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
               {isAuthenticated ? (
                 <>
                   <Route path="/home" component={HomePage} exact={true} />
@@ -360,11 +346,7 @@ function App() {
                   <Route path="/registerhere" component={Registerhere} exact={true} />
                   <Route path="/myquotations" component={Myquotations} exact={true} />
                   <Route path="/myquotationsview/:id" component={Myquotationsview} exact={true} />
-<<<<<<< HEAD
-                  <Route path="/privacypolicy" component={PrivacyPolicy} exact={true} />
-=======
                   {/* <Route path="/privacypolicy" component={PrivacyPolicy} exact={true} /> */}
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                   <Route path="/search" component={SearchPage} exact={true} />
                   <Route path="/product/:id" component={Productpage} exact={true} />
                   <Route path="/head" component={Head} exact={true} />
@@ -404,15 +386,9 @@ function App() {
             </div>
           </ion-router-link>
         <IonToolbar style={{
-<<<<<<< HEAD
-    padding: '10px 0 7px 0',
-  }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-=======
     padding: '0px 0 0px 0',
   }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',}}>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
               <div style={{ display: 'flex', alignItems: 'center' }}>
                 {/* <IonButtons slot="start">
                   <IonMenuButton fill='clear' >
@@ -493,13 +469,8 @@ function App() {
 
             <div className={`saidmenumain sidebar ${isMenuOpen ? 'open' : ''}`}style={{marginTop: '5px'}}>
               <IonHeader >
-<<<<<<< HEAD
-                <IonToolbar color="secondary" style={{padding: '10px 0 7px 0'}}>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-=======
                 <IonToolbar color="secondary" style={{padding: '10px 0 7px 0', }}>
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background:'#4c3226' }}>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     <div>
                       <IonImg
                         slot="start"

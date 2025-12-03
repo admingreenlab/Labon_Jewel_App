@@ -149,11 +149,7 @@ const Login = ({ handleClosep }) => {
                         className='freem253'
                         src="/img/logoa12.png"
                     ></img>
-<<<<<<< HEAD
-                    <div style={{ width: '100%', height: '30px', background: '#4c3226', position: 'absolute', left: ' 0', top: '0' }}></div>
-=======
                     <div style={{ width: '100%', height: '45px', background: '#4c3226', position: 'absolute', left: ' 0', top: '0' }}></div>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     <img
                         className='freemlogin1'
                         src="/img/freemlogin.svg"
@@ -259,11 +255,7 @@ const Login = ({ handleClosep }) => {
                                                             <label>Remember Me</label>
                                                         </span>
                                                     </IonCol>
-<<<<<<< HEAD
-                                                    <IonCol size='6' className="col-6 " style={{ textAlign: 'end' }}>
-=======
                                                     <IonCol size='6' className="col-6 " style={{ textAlign: 'end',margin:'-7px 0px 0px 0px'}}>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                                         <span onClick={() => handleItemClick()} style={{ cursor: "pointer", fontSize: '14px', color: '#bc7700' }}>
                                                             Forget Password ?
                                                         </span>

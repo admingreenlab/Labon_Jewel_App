@@ -22,20 +22,14 @@ import jwtAuthAxios from "../service/jwtAuth";
 import { DataContext } from "../context/DataProvider";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-<<<<<<< HEAD
-=======
 import { useHistory } from 'react-router-dom';
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 
 const WishlistPage = () => {
   const [counter, setCounter] = useState(0);
   const { wishData, setWishData } = useContext(DataContext);
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
-<<<<<<< HEAD
-=======
   const history = useHistory();
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 
   const incrementCounter = () => setCounter(counter + 1);
   const decrementCounter = () => {
@@ -58,11 +52,7 @@ const WishlistPage = () => {
 
 
   const handleView = (data) => {
-<<<<<<< HEAD
-    window.open(`/product/${data?._id}`);
-=======
     history.push(`/product/${data?._id}`);
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
   };
 
 

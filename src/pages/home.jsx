@@ -51,36 +51,16 @@ const HomePage = () => {
 
   return (
       <IonPage>
-<<<<<<< HEAD
-        <IonHeader collapse="condense">
-=======
         <IonHeader collapse="condense" style={{ marginBottom: "70px" }}>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
     {/* This is a dummy header to help Ionic recognize layout */}
   </IonHeader>
       <Head />
       
-<<<<<<< HEAD
-      <IonContent color="primary" style={{ marginTop: '100px' }}>
-=======
       <IonContent color="primary">
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
       
         <IonGrid >
           <IonRow>
             <IonCol>
-<<<<<<< HEAD
-              <Swiper className='videobnnnner' style={{ marginBottom: '20px', marginTop: '160px' }}
-                spaceBetween={50}
-                slidesPerView={1}
-                onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
-                autoplay={true}
-              >  
-                <SwiperSlide>
-                  <IonImg
-                    src="/img/slider-banner-2.jpg"
-=======
               <Swiper className='videobnnnner' style={{ marginBottom: '20px', marginTop: '100px' }}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -95,7 +75,6 @@ const HomePage = () => {
                  <SwiperSlide>
                   <IonImg
                     src="/img/slider-banner-4.jpg"
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     style={{ width: '100%', height: '200px', margin: '0', objectFit: 'cover', borderRadius: '9px', borderRadius: '9px', overflow: 'hidden' }}
                   ></IonImg>
                 </SwiperSlide>
@@ -107,11 +86,7 @@ const HomePage = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <IonImg
-<<<<<<< HEAD
-                    src="/img/slider-banner-4.jpg"
-=======
                     src="/img/slider-banner-2.jpg"
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     style={{ width: '100%', height: '200px', margin: '0', objectFit: 'cover', borderRadius: '9px', borderRadius: '9px', overflow: 'hidden' }}
                   ></IonImg>
                 </SwiperSlide>
@@ -133,12 +108,8 @@ const HomePage = () => {
                         src="/img/catagory-bg.png"
                       ></IonImg>
                     </div>
-<<<<<<< HEAD
-                    <IonTitle>{item.name}</IonTitle>
-=======
                     {/* <IonTitle>{item.name}</IonTitle> */}
                     <div style={{color:'#4c3226',textAlign:'center', fontSize:'15px', marginBottom:'20px' }}>{item.name}</div>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                   </ion-router-link>
                 </IonCol>
               ))}

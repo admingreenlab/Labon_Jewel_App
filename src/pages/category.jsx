@@ -327,18 +327,6 @@ function Category() {
     }, [id, page, CategoryFilter, selectedCollection, pageSize, marginValue]);
 
 
-<<<<<<< HEAD
-    const handleRefresh = async (event) => {
-        await fetchCategoryData();
-        setTimeout(() => {
-            // Any calls to load data go here
-            event.detail.complete();
-        }, 1500); // Signal that the refresh is complete
-    };
-
-
-=======
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 
     useEffect(() => {
         if (pendingFetch) {
@@ -442,15 +430,6 @@ function Category() {
                 <div style={{ margin: '30px', marginTop: '110px' }}></div>
 
                 <IonContent color="primary">
-<<<<<<< HEAD
-                    <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
-                        <IonRefresherContent
-                            pullingIcon={chevronDownCircleOutline}
-                            refreshingSpinner="circles"
-                        ></IonRefresherContent>
-                    </IonRefresher>
-=======
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     <IonGrid>
                         <IonRow>
                             <IonCol>

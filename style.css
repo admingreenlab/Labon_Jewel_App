@@ -351,11 +351,7 @@ ion-tab-bar.md.hydrated::before {
 .right_bottom_fix {
     position: fixed;
     right: 9px;
-<<<<<<< HEAD
-    bottom: 64px;
-=======
     bottom: 100px;
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
     z-index: 1;
 }
 
@@ -468,20 +464,12 @@ ion-list.md.list-md {
     margin-left: auto;
 } */
 
-<<<<<<< HEAD
-ion-radio {
-=======
 /* ion-radio {
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
     --border-radius: 100%;
     --inner-border-radius: 100%;
     --color: #ddd;
     --color-checked: rgb(238, 187, 155);
-<<<<<<< HEAD
-}
-=======
 } */
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 
 .alert-radio-inner.sc-ion-alert-md {
     background-color: #795548 !important;
@@ -502,13 +490,8 @@ ion-radio.md.radio-label-placement-start.ion-activatable.ion-focusable.hydrated.
 }
 
 ion-radio.ios::part(container) {
-<<<<<<< HEAD
-    width: 20px;
-    height: 20px;
-=======
     width: 25px;
     height: 25px;
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
     border: 2px solid #ddd;
     border-radius: 4px;
 }
@@ -1086,14 +1069,10 @@ ion-content {
     --padding-bottom: 55px !important;
 }
 
-<<<<<<< HEAD
-
-=======
 ion-toolbar {
     --background: #4c3226;
     --color: #fff;
 }
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 
 .productreduio h6 {
     font-family: 'Poppins';
@@ -1178,8 +1157,6 @@ ion-toolbar {
 .diamondcol ion-radio.radio-checked::part(container) {
     color: #34221a; 
 }
-<<<<<<< HEAD
-=======
 .diamondcolmin ion-radio.radio-checked::part(mark) {
     display: block;
     width: 10px;
@@ -1196,7 +1173,6 @@ ion-toolbar {
     display: none;
   }
 
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
 .adtocard {
     width: 50%;
     margin-bottom: 20px;
@@ -1978,9 +1954,5 @@ input:focus-visible {
 }
 /* .marginview .select-icon.md.hydrated {
     display: none !important;
-<<<<<<< HEAD
-} */
-=======
 } */
  
->>>>>>> d0b8ea1 (Merge remote ios with local ios)

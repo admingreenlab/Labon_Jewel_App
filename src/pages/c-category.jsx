@@ -185,21 +185,6 @@ function CategoryPage() {
 
     return (
         <IonPage>
-<<<<<<< HEAD
-            <Header />
-            <IonHeader>
-                <h1>Home</h1>
-            </IonHeader>
-            
-
-            <IonContent color="primary" >
-                <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px' }}>
-                    <IonRefresherContent
-                        pullingIcon={chevronDownCircleOutline}
-                        refreshingSpinner="circles"
-                    ></IonRefresherContent>
-                </IonRefresher>
-=======
                  <IonHeader style={{ marginBottom: "70px" }}>
                                         {/* <h1>Home</h1> */}
                                     </IonHeader>
@@ -208,7 +193,6 @@ function CategoryPage() {
             
 
             <IonContent color="primary" >
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
                 <IonGrid style={{ marginTop: '90px' }}>
                     <IonRow>
                         <IonCol>

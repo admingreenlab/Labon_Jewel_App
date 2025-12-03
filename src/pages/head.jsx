@@ -80,11 +80,7 @@ function Head() {
   return (
     <>
       {showDropdown && (
-<<<<<<< HEAD
-        <div className='dropdown-menu' style={{ position: 'absolute', right: '9px', top: '62px', border: '1px solid #ccc', zIndex: 1000 }}>
-=======
         <div className='dropdown-menu' style={{ position: 'absolute', right: '9px', top: '62px', border: '1px solid #ccc', zIndex: 1000 ,}}>
->>>>>>> d0b8ea1 (Merge remote ios with local ios)
           {/* Dropdown items */}
           <div className="profile">
             <h6 className="text-center mt-2">Admin</h6>

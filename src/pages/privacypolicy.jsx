@@ -11,7 +11,11 @@ import {
     IonButton,
     IonButtons,
     IonCardTitle,
+<<<<<<< HEAD
 
+=======
+    IonPage
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
 } from '@ionic/react';
 import '../pages/Tab1.css';
 import '../main';
@@ -38,15 +42,30 @@ const RadioPage = () => {
 
     return (
         <>
+<<<<<<< HEAD
+=======
+              <IonPage>
+                   <IonHeader style={{ marginBottom: "70px" }}>
+                      
+                            </IonHeader>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
             <Header />
 
 
             <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '100px' }}>
+<<<<<<< HEAD
                 <h4 className="text-center mb-5 element" style={{ marginTop: '20px' }}>Privacy policy</h4>
                 <IonGrid>
                     <IonRow>
                         <IonCol size='12'>
                             <div className=' privacypolicy' style={{marginTop:'70px', textAlign:'justify'}}>
+=======
+                <h4 className="text-center mb-5 element" style={{ marginTop: ' 120px' }}>Privacy policy</h4>
+                <IonGrid>
+                    <IonRow>
+                        <IonCol size='12'>
+                            <div className=' privacypolicy' style={{ textAlign:'justify'}}>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                 <h5 className="mb-2">
                                     Privacy Policy for Labon Jewels Private Limited
                                 </h5>
@@ -240,6 +259,10 @@ const RadioPage = () => {
                     </IonRow>
                 </IonGrid>
             </IonContent >
+<<<<<<< HEAD
+=======
+            </IonPage>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
         </>
     );
 };

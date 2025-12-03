@@ -185,6 +185,7 @@ function CategoryPage() {
 
     return (
         <IonPage>
+<<<<<<< HEAD
             <Header />
             <IonHeader>
                 <h1>Home</h1>
@@ -198,6 +199,16 @@ function CategoryPage() {
                         refreshingSpinner="circles"
                     ></IonRefresherContent>
                 </IonRefresher>
+=======
+                 <IonHeader style={{ marginBottom: "70px" }}>
+                                        {/* <h1>Home</h1> */}
+                                    </IonHeader>
+            <Header />
+        
+            
+
+            <IonContent color="primary" >
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                 <IonGrid style={{ marginTop: '90px' }}>
                     <IonRow>
                         <IonCol>

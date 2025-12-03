@@ -337,6 +337,7 @@ function Product() {
              <IonPage>
     
             <IonHeader style={{ marginBottom: "50px" }}>
+<<<<<<< HEAD
                 <h1 style={{color:'white'}}>home</h1>
             </IonHeader>
             <Header />
@@ -344,6 +345,15 @@ function Product() {
                 <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '10px', marginTop: '150px' }}>
                     <div style={{ marginTop: '20px' }}>
                         <h5 class="text-center mb-5 element">Products</h5>
+=======
+                {/* <h1 style={{color:'white'}}>home</h1> */}
+            </IonHeader>
+            <Header />
+                <div style={{ margin: '30px', marginTop: '80px' }}></div>
+                <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '10px',}}>
+                    <div style={{ marginTop: '20px' }}>
+                        <h5 class="text-center mb-5 element">Products Page</h5>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     </div>
 
                     <div className='main-catagory'>
@@ -371,14 +381,23 @@ function Product() {
                                                         otherUploadImg?.split(",")?.map((img, index) => (
                                                             <SwiperSlide>
 
+<<<<<<< HEAD
                                                                 <div onClick={() => openModal(index)}  >
                                                                     <div className='imgbtn' style={{marginRight:"15px"}}>
+=======
+                                                                <div   >
+                                                                    {/* <div className='imgbtn' style={{marginRight:"15px"}}>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-zoom-in" viewBox="0 0 16 16">
                                                                             <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11M13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
                                                                             <path d="M10.344 11.742q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1 6.5 6.5 0 0 1-1.398 1.4z" />
                                                                             <path fill-rule="evenodd" d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5" />
                                                                         </svg>
+<<<<<<< HEAD
                                                                     </div>
+=======
+                                                                    </div> */}
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                                                     <img src={IMG_PATH + img} key={index} className="slider-img pulsating-circle" />
                                                                 </div>
                                                             </SwiperSlide>
@@ -430,11 +449,21 @@ function Product() {
                                                             <img src={IMG_PATH + thumbnailImage} class="twominimg" />
                                                         </SwiperSlide>
                                                     )}
+<<<<<<< HEAD
                                                     <div style={{ order: "-1" }}>
                                                         {videopath?.length > 0 && (
                                                             <div className='thumblineimage' style={{ marginRight: "10px", position: 'relative' }}>
                                                                 <a href={videopath} target="_black">
                                                                     <div style={{ maxWidth: "30px", height: '30px', objectFit: 'contain', borderRadius: '5px', position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}>
+=======
+                                                   
+                                                </Swiper>
+                                                <div style={{ order: "-1", margin:'8px 0px 0px 8px'}}>
+                                                        {videopath?.length > 0 && (
+                                                            <div className='thumblineimage' style={{ marginRight: "10px", position: 'relative' }}>
+                                                                <a href={videopath} target="_black">
+                                                                    <div style={{ maxWidth: "30px", height: '30px', objectFit: 'contain', borderRadius: '5px', position: "absolute", left: "50%", top: "50%", transform: "translate(30%, -50%)" }}>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                                                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#959191" class="bi bi-play-circle" viewBox="0 0 16 16">
                                                                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
                                                                             <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
@@ -453,7 +482,10 @@ function Product() {
                                                             </div>
                                                         )}
                                                     </div>
+<<<<<<< HEAD
                                                 </Swiper>
+=======
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                             </div>
                                         </IonCol>
                                     </IonRow>
@@ -843,7 +875,11 @@ function Product() {
                                                     <IonCol size='12' style={{ margin: '10px 0' ,padding:"0" }}>
                                                         {colorstone ? (
                                                             <div value="end" style={{ display: 'flex', alignItems: 'center', gap: '10px', margin: '0' }}>
+<<<<<<< HEAD
                                                                 <span style={{ color: 'rgb(73 69 69)', fontSize: '15px', borderRadius: '20px', marginTop: '16px', padding: '5px 25px', border: '1px solid #9f9993', }}>Color Stone Details : <div slot='end'
+=======
+                                                                <span style={{ color: 'rgb(73 69 69)', fontSize: '16px', borderRadius: '20px', marginTop: '10px', padding: '5px 25px', border: '1px solid #9f9993', }}>Color Stone Details : <div slot='end'
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                                                     labelPlacement="end" style={{ color: 'rgb(76, 50, 38)', marginRight: '0', marginTop: '5px', fontSize: '14px' }}>{colorstone}</div></span>
                                                             </div>
                                                         ) : (

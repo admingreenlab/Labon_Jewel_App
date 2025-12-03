@@ -59,7 +59,11 @@ const LibraryPage = () => {
   return (
     <>
       <IonHeader style={{ marginBottom: "50px" }}>
+<<<<<<< HEAD
         <h1 style={{color:'white'}}>home</h1>
+=======
+        {/* <h1 style={{color:'white'}}>home</h1> */}
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
       </IonHeader>
       <Header />
       <IonPage>

@@ -542,7 +542,11 @@ const RadioPage = () => {
                                       className="px-product"
                                       style={{
                                         display: 'flex',
+<<<<<<< HEAD
                                         alignItems: 'center',
+=======
+                                        justifyContent: 'center',
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                         flexFlow: 'wrap',
                                       }}
                                     >
@@ -580,7 +584,11 @@ const RadioPage = () => {
                                       className="px-product"
                                       style={{
                                         display: 'flex',
+<<<<<<< HEAD
                                         alignItems: 'center',
+=======
+                                        justifyContent: 'center',
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                                         flexFlow: 'wrap',
                                       }}
                                     >

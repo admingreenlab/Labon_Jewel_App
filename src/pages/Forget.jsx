@@ -62,7 +62,11 @@ const Forget = () => {
                         className='freem253'
                         src="/img/logoa12.png"
                     ></img>
+<<<<<<< HEAD
                     <div style={{ width: '100%', height: '30px', background: '#4c3226', position: 'absolute', left: ' 0', top: '0' }}></div>
+=======
+                    <div style={{ width: '100%', height: '45px', background: '#4c3226', position: 'absolute', left: ' 0', top: '0' }}></div>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                     <img
                         className='freemlogin1'
                         src="/img/freemlogin.svg"

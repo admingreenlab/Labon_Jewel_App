@@ -132,16 +132,28 @@ function Orders() {
 <IonPage>
             <Header />
             <IonHeader>
+<<<<<<< HEAD
                 <h1 style={{color:'white'}}>home</h1>
             </IonHeader>
                 <div style={{ margin: '30px', marginTop: '100px' }}></div>
             <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '150px', marginTop: '10px' }}>
                         <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px'  }}>
+=======
+                {/* <h1 style={{color:'white'}}>home</h1> */}
+            </IonHeader>
+                <div style={{ margin: '30px', marginTop: '100px' }}></div>
+            <IonContent color="primary" style={{ paddingBottom: '80x', marginBottom: '150px', marginTop: '10px' }}>
+                        {/* <IonRefresher slot="fixed" onIonRefresh={handleRefresh} style={{ marginTop: '20px'  }}>
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                           <IonRefresherContent
                             pullingIcon={chevronDownCircleOutline}
                             refreshingSpinner="circles"
                           ></IonRefresherContent>
+<<<<<<< HEAD
                         </IonRefresher>
+=======
+                        </IonRefresher> */}
+>>>>>>> d0b8ea1 (Merge remote ios with local ios)
                 <div style={{ marginTop: '20px' }}>
                     <h5 class="text-center mb-5 element"  style={{marginTop:'70px'}}>My Order</h5>
                 </div>
